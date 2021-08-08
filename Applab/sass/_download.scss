@@ -1,0 +1,40 @@
+.download {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &-inner {
+    display: flex;
+  }
+  &-content {
+    width: 55%;
+  }
+  &-media {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 45%;
+  }
+  &-action {
+    display: inline-flex;
+    column-gap: 30px;
+    & > * {
+      flex: 1;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .download {
+    &-inner {
+      flex-direction: column-reverse;
+    }
+    &-media {
+      position: unset;
+      transform: unset;
+      width: 100%;
+    }
+    &-content {
+      width: 100%;
+    }
+  }
+}

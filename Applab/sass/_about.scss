@@ -1,0 +1,120 @@
+.about {
+  padding-top: 180px;
+  position: relative;
+  &-title {
+    max-width: 350px;
+  }
+  &-desc {
+    max-width: 400px;
+  }
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -60px;
+    > * {
+      width: calc(50% - 60px);
+      margin-left: 60px;
+    }
+  }
+  &-content {
+    width: 60%;
+    padding-left: 40px;
+  }
+  &-media {
+    position: absolute;
+    top: 60%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 43%;
+  }
+  &-item {
+    margin-bottom: 50px;
+    &-icon {
+      @include iconCircle;
+      margin-bottom: 20px;
+    }
+    &-title {
+      font-weight: 600;
+      font-size: 2rem;
+      color: $title-color;
+
+      margin-bottom: 10px;
+    }
+    &-desc {
+      max-width: 270px;
+    }
+  }
+  &-action {
+    > .btn {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .about {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about {
+    &-inner {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &-title {
+      margin-bottom: 30px;
+    }
+    &-content {
+      width: 100%;
+      padding-left: 0;
+    }
+    &-media {
+      position: unset;
+      transform: unset;
+      top: unset;
+      left: unset;
+
+      width: 100%;
+    }
+    &-list {
+    display: grid;
+    justify-content: flex-start;
+    grid-auto-columns: 100%;
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 2rem;
+    grid-template-columns: unset;
+    }
+    &-list::-webkit-scrollbar {
+      display: none;
+      width: 0;
+    }
+    &-list > * {
+      scroll-snap-align: start;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+    }
+    &-item {
+      &-desc {
+        text-align: center;
+      }
+    }
+    &-action {
+      text-align: center;
+    }
+  }
+}
+

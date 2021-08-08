@@ -1,0 +1,49 @@
+.smart {
+  padding-top: 140px;
+  &-inner {
+    display: flex;
+    align-items: center;
+  }
+  &-title {
+    line-height: 1.33;
+    width: 100%;
+    max-width: 555px;
+    
+    padding-left: 50px;
+    padding-right: 55px;
+
+    border-right: 1px solid #ccc;
+  }
+  &-desc {
+    max-width: 470px;
+    padding-left: 48px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .smart {
+    padding-top: 100px;
+  }
+  .smart-title {
+    width: unset;
+    border-right: 2px solid #ccc;
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .smart {
+    &-inner {
+      flex-direction: column;
+    }
+    &-title {
+      padding-right: 20px;
+      border-right: none;
+
+      margin-bottom: 30px;
+    }
+    &-desc {
+      padding-left: 0;
+    }
+  }
+}
+
+

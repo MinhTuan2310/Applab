@@ -1,0 +1,43 @@
+.achievement {
+  margin-bottom: 110px;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      width: calc(100% / 3);
+    }
+  }
+  &-icon {
+    @include iconCircle;
+    margin-bottom: 30px;
+  }
+  &-title {
+    margin-bottom: 10px;
+  }
+  &-desc {
+    max-width: 270px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .achievement {
+    padding-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .achievement {
+    margin-bottom: 0px;
+    &-list {
+      display: block;
+      > * {
+        width: 100%;
+      }
+    }
+    &-item {
+      display: flex;
+      margin-bottom: 30px;
+    }
+    &-content {
+      padding-left: 30px;
+    }
+  }
+}

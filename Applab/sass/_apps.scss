@@ -1,0 +1,58 @@
+.app {
+  margin-top: 110px;
+  padding-top: 110px;
+  
+  border-top: 1px solid #ccc;
+  &-inner {
+    @include flex("centerc");
+  }
+  &-title {
+    max-width: 450px;
+    text-align: center;
+  }
+  &-desc {
+    max-width: 650px;
+    text-align: center;
+  }
+  &-list {
+    @include grid(3, 70);
+  }
+  &-item {
+    @include flex("centerc");
+    &-media {
+      @include iconCircle;
+      margin-bottom: 20px;
+    }
+    &-desc {
+      max-width: 270px;
+      text-align: center;
+    }
+    &-title {
+      font-weight: 600;
+      font-size: 2rem;
+      color: $title-color;
+
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .app {
+    margin-top: 50px;
+    padding-top: 50px;
+    &-list {
+      @include grid(2, 70);
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .app {
+    &-list {
+      @include grid(1, 35);
+    }
+    &-desc {
+      margin-bottom: 50px;
+    }
+  }
+}
+

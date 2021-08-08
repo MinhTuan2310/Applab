@@ -1,0 +1,117 @@
+
+@mixin position($direction: "both") {
+  position: absolute;
+  @if ($direction == "left") {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if($direction == "top") {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if ($direction == "both") {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+@mixin flex($layout: "center") {
+  display: flex;
+  @if ($layout == "center") {
+    justify-content: center;
+    align-items: center;
+  }
+  @if ($layout == "centerc") {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  @if ($layout == "centerx") {
+    justify-content: center;
+    align-items: center;
+  }
+  @if ($layout == "centery") {
+    align-items: center;
+    flex-direction: column;
+  }
+  @if ($layout == "between") {
+    justify-content: space-between;
+  }
+  @if ($layout == "evenly") {
+    justify-content: space-evenly;
+  }
+  @if ($layout == "around") {
+    justify-content: space-around;
+  }
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+@mixin iconCircle() {
+    flex-shrink: 0;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100rem;
+}
+
+$fontSize: "60", "36", "40", "20", "18", "48";
+@each $item in $fontSize {
+  .text-title-#{$item} {
+    font-weight: 600;
+    font-size: #{$item} + "px";
+    color: $title-color;
+  }
+}
+@mixin grid($column, $columnGrid, $rowGrid: $columnGrid) {
+  display: grid;
+  grid-template-columns: repeat($column, 1fr);
+  column-gap: #{$columnGrid} + "px";
+  row-gap: #{$rowGrid} + "px";
+}
+
+.pt-110 {
+  padding-top: 110px;
+}
+.pt-50  {
+  padding-top: 50px;
+}
+@mixin text ($weight: bold, $size: 3rem, $color: $title-color) {
+  font-weight: $weight;
+  color: $color;
+  font-size: $size;
+}
+
+$margin-bottoms: "10", "20", "25", "30", "60", "95";
+@each $item in $margin-bottoms {
+  .mb-#{$item} {
+    margin-bottom: #{$item} + "px";
+  }
+}
+
+// $layoutList: "flex", "block", "inline-block", "inline-flex", "unset";
+// @each $layout in $layoutList {
+//   .d-#{$layout} {
+//     display: #{$layout};
+//   }
+// }
+
+// $justifyContentList: "center", "flex-start", "flex-end", "space-between", "space-evenly", "space-around";
+// @each $justifyContent in $justifyContentList {
+//   .jc-#{$justifyContent} {
+//     justify-content: #{$justifyContent};
+//   }
+// }
+
+// $alignItemList: "center", "flex-start", "flex-end", "space-between", "space-evenly", "space-around";
+// @each $alignItem in $alignItemList {
+//   .al-#{$alignItem} {
+//     justify-content: #{$alignItem};
+//   }
+// }
+
