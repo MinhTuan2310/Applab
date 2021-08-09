@@ -51,6 +51,7 @@
 }
 @media screen and (max-width: 767px) {
   .feature {
+    padding-top: 50px;
     &-inner {
       flex-direction: column;
     }

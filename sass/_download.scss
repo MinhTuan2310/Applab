@@ -25,6 +25,7 @@
 }
 @media screen and (max-width: 767px) {
   .download {
+    padding-bottom: 50px;
     &-inner {
       flex-direction: column-reverse;
     }

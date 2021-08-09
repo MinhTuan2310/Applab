@@ -419,6 +419,9 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .feature {
+    padding-top: 50px;
+  }
   .feature-inner {
     flex-direction: column;
   }
@@ -465,6 +468,9 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .smart {
+    padding-top: 50px;
+  }
   .smart-inner {
     flex-direction: column;
   }
@@ -511,6 +517,8 @@ body {
 }
 @media screen and (max-width: 767px) {
   .achievement {
+    padding-top: 50px;
+    padding-bottom: 0;
     margin-bottom: 0px;
   }
   .achievement-list {
@@ -561,6 +569,7 @@ body {
 @media screen and (max-width: 767px) {
   .design {
     padding-bottom: 0;
+    padding-top: 50px;
   }
   .design-media {
     position: unset;
@@ -594,6 +603,7 @@ body {
   text-align: center;
 }
 .app-list {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 70px;
@@ -641,9 +651,26 @@ body {
 @media screen and (max-width: 767px) {
   .app-list {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 35px;
-    row-gap: 35px;
+    justify-content: flex-start;
+    grid-auto-columns: 90%;
+    grid-auto-flow: column;
+    grid-gap: 1.5rem;
+    overflow: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-snap-stop: always;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    grid-template-columns: unset;
+  }
+  .app-list::-webkit-scrollbar {
+    display: none;
+    width: 0;
+  }
+  .app-list > * {
+    scroll-snap-align: start;
   }
   .app-desc {
     margin-bottom: 50px;
@@ -712,6 +739,9 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  .about {
+    padding-top: 50px;
+  }
   .about-inner {
     display: flex;
     flex-direction: column-reverse;
@@ -827,6 +857,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .price {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .price-title {
     text-align: left;
   }
@@ -923,6 +957,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .client {
+    padding-top: 50px;
     padding-bottom: 50px;
   }
   .client-media {
@@ -993,6 +1028,10 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .accordion {
+    padding-bottom: 50px;
+  }
+
   .accordion-content,
 .accordion-select {
     padding-left: 0;
@@ -1031,6 +1070,9 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  .download {
+    padding-bottom: 50px;
+  }
   .download-inner {
     flex-direction: column-reverse;
   }
@@ -1096,6 +1138,7 @@ body {
 @media screen and (max-width: 767px) {
   .footer {
     padding-bottom: 50px;
+    padding-top: 50px;
   }
   .footer-list {
     display: unset;
@@ -1105,6 +1148,9 @@ body {
   }
   .footer-item {
     padding: 10px 0;
+  }
+  .footer-container-icon {
+    margin-bottom: 30px;
   }
 }
 

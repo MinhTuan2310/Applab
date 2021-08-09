@@ -25,6 +25,8 @@
 }
 @media screen and (max-width: 767px) {
   .achievement {
+    padding-top: 50px;
+    padding-bottom: 0;
     margin-bottom: 0px;
     &-list {
       display: block;

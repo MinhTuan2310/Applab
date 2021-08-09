@@ -31,6 +31,7 @@
 }
 @media screen and (max-width: 767px) {
   .smart {
+    padding-top: 50px;
     &-inner {
       flex-direction: column;
     }

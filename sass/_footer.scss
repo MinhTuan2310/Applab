@@ -53,6 +53,7 @@
 @media screen and (max-width: 767px) {
   .footer {
     padding-bottom: 50px;
+    padding-top: 50px;
     &-list {
       display: unset;
     }
@@ -61,6 +62,9 @@
     }
     &-item {
       padding: 10px 0;
+    }
+    &-container-icon {
+      margin-bottom: 30px;
     }
   }
 }
