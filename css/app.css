@@ -154,7 +154,7 @@ body {
 .header .hambuger {
   display: none;
 }
-.header .nav {
+.header .nav-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -183,7 +183,7 @@ body {
 }
 .header .hero {
   padding-top: 50px;
-  background-image: url(../img/Home-page-Recovered.png);
+  background-image: url(../img/background-header.png);
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: cover;

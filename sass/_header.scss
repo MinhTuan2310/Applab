@@ -3,8 +3,10 @@
     display: none;
   }
   .nav {
-    @include flex("between");
-    align-items: center;
+    &-inner {
+      @include flex("between");
+      align-items: center;
+    }
     &-brand {
       @include text;
       & span {
@@ -31,7 +33,7 @@
   .hero {
     padding-top: 50px;
 
-    background-image: url(../img/Home-page-Recovered.png);
+    background-image: url(../img/background-header.png);
     background-repeat: no-repeat;
     background-position: center bottom;
     background-size: cover;
