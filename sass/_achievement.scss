@@ -24,11 +24,6 @@
   &-desc {
     max-width: 270px;
   }
-  &-item {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
 }
 @media screen and (max-width: 1023px) {
   .achievement {
