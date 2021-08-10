@@ -185,7 +185,6 @@ body {
   padding-top: 50px;
   background-image: url(../img/background-header.png);
   background-repeat: no-repeat;
-  background-position: center bottom;
   background-size: cover;
 }
 .header .hero-inner {
@@ -506,6 +505,9 @@ body {
 }
 .achievement-title {
   margin-bottom: 10px;
+}
+.achievement-desc {
+  max-width: 270px;
 }
 
 @media screen and (max-width: 1023px) {

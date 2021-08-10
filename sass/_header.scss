@@ -35,7 +35,6 @@
 
     background-image: url(../img/background-header.png);
     background-repeat: no-repeat;
-    background-position: center bottom;
     background-size: cover;
     &-inner {
       @include flex("centerx");
