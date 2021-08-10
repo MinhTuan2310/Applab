@@ -2,9 +2,11 @@
   margin-bottom: 110px;
   &-list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 100px;
     & > * {
-      width: calc(100% / 3);
+      flex: 1;
     }
   }
   &-icon {
@@ -14,13 +16,13 @@
   &-title {
     margin-bottom: 10px;
   }
-  &-desc {
-    max-width: 270px;
-  }
 }
 @media screen and (max-width: 1023px) {
   .achievement {
     padding-top: 100px;
+    &-list {
+      gap: 40px;
+    }
   }
 }
 @media screen and (max-width: 767px) {

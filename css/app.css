@@ -101,7 +101,6 @@ body {
 .btn:hover {
   background-color: #2500f9;
   color: #fff;
-  font-weight: 500;
 }
 
 .text-red {
@@ -488,10 +487,12 @@ body {
 }
 .achievement-list {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  gap: 100px;
 }
 .achievement-list > * {
-  width: calc(100% / 3);
+  flex: 1;
 }
 .achievement-icon {
   flex-shrink: 0;
@@ -506,13 +507,13 @@ body {
 .achievement-title {
   margin-bottom: 10px;
 }
-.achievement-desc {
-  max-width: 270px;
-}
 
 @media screen and (max-width: 1023px) {
   .achievement {
     padding-top: 100px;
+  }
+  .achievement-list {
+    gap: 40px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -838,6 +839,7 @@ body {
 
 .card.active {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border: none;
 }
 
 .card-head {
@@ -1045,21 +1047,27 @@ body {
 }
 .download {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
 }
 .download-inner {
   display: flex;
 }
 .download-content {
   width: 55%;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 .download-media {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-50%);
+  bottom: 0;
+  transform: translateY(-38%);
   width: 45%;
+  height: 100%;
+}
+.download-media > img {
+  height: 100%;
+  object-fit: cover;
 }
 .download-action {
   display: inline-flex;
@@ -1071,7 +1079,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .download {
-    padding-bottom: 50px;
+    padding-top: 50px;
   }
   .download-inner {
     flex-direction: column-reverse;
@@ -1083,6 +1091,13 @@ body {
   }
   .download-content {
     width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .download-media > img {
+    object-fit: contain;
   }
 }
 .footer {

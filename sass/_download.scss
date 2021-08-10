@@ -1,19 +1,26 @@
 .download {
   position: relative;
-  padding-top: 100px;
-  padding-bottom: 100px;
   &-inner {
     display: flex;
   }
   &-content {
     width: 55%;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   &-media {
     position: absolute;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
+    bottom : 0;
+    transform: translateY(-38%);
     width: 45%;
+    height: 100%;
+    > img {
+      height: 100%;
+      object-fit: cover;
+    }
   }
   &-action {
     display: inline-flex;
@@ -25,7 +32,7 @@
 }
 @media screen and (max-width: 767px) {
   .download {
-    padding-bottom: 50px;
+    padding-top: 50px;
     &-inner {
       flex-direction: column-reverse;
     }
@@ -36,6 +43,18 @@
     }
     &-content {
       width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
   }
 }
+@media screen and (max-width: 1023px) {
+  .download {
+    &-media {
+      > img {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
